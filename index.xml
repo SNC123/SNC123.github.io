@@ -2,25 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SNC&#39;s blog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://snc123.github.io/</link>
     <description>Recent content on SNC&#39;s blog</description>
     <generator>Hugo -- 0.134.3</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 22 Sep 2024 16:35:56 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://snc123.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>测试页面</title>
-      <link>http://localhost:1313/posts/first/</link>
+      <link>https://snc123.github.io/posts/first/</link>
       <pubDate>Sun, 22 Sep 2024 16:35:56 +0800</pubDate>
-      <guid>http://localhost:1313/posts/first/</guid>
+      <guid>https://snc123.github.io/posts/first/</guid>
       <description>&lt;p&gt;用于测试的第一个页面&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Sun, 22 Sep 2024 16:34:31 +0800</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;SNC的个人博客&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
