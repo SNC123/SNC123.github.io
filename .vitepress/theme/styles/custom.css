@@ -1,0 +1,31 @@
+/* Global benchmark table styles */
+.benchmark-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92em;
+  margin: 0.5em 0 1.2em;
+}
+.benchmark-table-wrap th,
+.benchmark-table-wrap td {
+  border: 1px solid var(--vp-c-divider);
+  padding: 6px 12px;
+}
+.benchmark-table-wrap thead th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+}
+.benchmark-table-wrap tbody tr:hover {
+  background: var(--vp-c-bg-soft);
+}
+
+/* Chart CSS variables */
+:root {
+  --bc-grid: #e4e4e7;
+  --bc-axis: #a1a1aa;
+  --bc-dot-border: #fff;
+}
+.dark {
+  --bc-grid: #3f3f46;
+  --bc-axis: #71717a;
+  --bc-dot-border: #1e1e20;
+}

@@ -1,6 +1,8 @@
-# VitePress 入门指南
+---
+date: 2026-04-04
+---
 
-*2026 年 4 月 4 日*
+# VitePress 入门指南
 
 欢迎来到我的博客！本站由 [VitePress](https://vitepress.dev/) 驱动。
 
@@ -51,4 +53,4 @@ VitePress 支持标准 Markdown 的全部语法，还额外支持：
 - 语法高亮
 - 自定义容器（提示框）
 - 在 Markdown 中直接使用 Vue 组件
-- 数学公式（见[基础使用](./basic-usage)）
+- 数学公式与图表（见[基础使用](./basic-usage)）

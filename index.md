@@ -2,19 +2,19 @@
 layout: home
 
 hero:
-  name: 我的博客
-  text: 由 VitePress 驱动
-  tagline: 记录思考与探索。
+  name: sinhco的博客
+  text: 保持你的好奇心
+  tagline: 思考、汇总。
   actions:
     - theme: brand
       text: 阅读文章
       link: /posts/
 
 features:
-  - title: 快速
-    details: 基于 VitePress 与 Vite，拥有极速的构建和页面加载性能。
-  - title: 简洁
-    details: 专注于内容，干净清爽的默认主题。
-  - title: Markdown
-    details: 使用 Markdown 写作，支持代码高亮、数学公式等扩展功能。
+  - title: 计算机科学
+    details: 记录计算机学习中的思考与知识
+  - title: 博物
+    details: 记录生活中有趣的东西
+  - title: TO BE CONTINUED
+    details: ……
 ---

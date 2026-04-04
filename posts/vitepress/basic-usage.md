@@ -1,6 +1,8 @@
-# 基础使用：图片与公式
+---
+date: 2026-04-04
+---
 
-*2026 年 4 月 4 日*
+# 基础使用：图片、公式与图表
 
 本文演示在 VitePress 博客中插入图片和数学公式的方法。
 
@@ -128,3 +130,64 @@ $$
 $$
 \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}, \qquad \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
 $$
+
+## 图表组件（BenchmarkChart）
+
+本站内置了 `BenchmarkChart` Vue 组件，可在任意 Markdown 文章中直接使用，无需 `import`。
+
+### 用法
+
+在 Markdown 中插入以下标签：
+
+```html
+<BenchmarkChart
+  title="图表标题"
+  :labels="['A', 'B', 'C', 'D']"
+  :series="[
+    { name: '方案一', color: '#e05c5c', values: [10, 20, 30, 40] },
+    { name: '方案二', color: '#56c26e', values: [5, 25, 50, 100] },
+  ]"
+  unit="ms"
+/>
+```
+
+### 参数说明
+
+| 参数 | 类型 | 说明 |
+|------|------|------|
+| `title` | `string` | 图表标题，显示在左上角 |
+| `labels` | `string[]` | X 轴刻度标签数组 |
+| `series` | `object[]` | 数据系列，每项含 `name`（名称）、`color`（颜色）、`values`（数值数组） |
+| `unit` | `string` | 数值单位，显示在 tooltip 中 |
+
+### 示例效果
+
+<BenchmarkChart
+  title="示例：两组数据对比"
+  :labels="['Q1', 'Q2', 'Q3', 'Q4']"
+  :series="[
+    { name: '方案一', color: '#e05c5c', values: [10, 8, 7, 6] },
+    { name: '方案二', color: '#56c26e', values: [10, 18, 32, 60] },
+  ]"
+  unit="M ops/s"
+/>
+
+### 线性 / 对数轴切换
+
+图表右上角提供「线性」与「对数」两种坐标轴模式，点击可切换。
+
+当各方案数值相差数量级时（如性能基准测试），切换到对数轴可清晰展示各方案间的差异：
+
+<BenchmarkChart
+  title="对数轴示例：跨越多个数量级"
+  :labels="['1线程', '2线程', '4线程', '48线程']"
+  :series="[
+    { name: '方案一 SingleAtomic', color: '#e05c5c', values: [133.7, 56.6, 51.9, 43.1] },
+    { name: '方案二 HashShard',    color: '#f0a500', values: [76.1, 149.4, 297.3, 743.2] },
+    { name: '方案三 ThreadLocal',  color: '#56c26e', values: [411.7, 823.4, 1638.8, 7458.3] },
+  ]"
+  unit="M ops/s"
+/>
+
+> [!TIP]
+> 悬停在数据点上可查看该列所有方案的精确数值。
