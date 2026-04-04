@@ -24,30 +24,33 @@ const updatedAt = computed(() => {
 
 <template>
   <div v-if="createdAt || updatedAt" class="post-meta">
-    <span v-if="createdAt" class="post-meta-item">
-      <span class="post-meta-icon"></span>发布于 {{ createdAt }}
-    </span>
-    <span v-if="updatedAt" class="post-meta-item">
-      <span class="post-meta-icon"></span>更新于 {{ updatedAt }}
-    </span>
+    <div v-if="createdAt" class="post-meta-item">
+      <span class="post-meta-label">发布于</span>{{ createdAt }}
+    </div>
+    <div v-if="updatedAt" class="post-meta-item">
+      <span class="post-meta-label">更新于</span>{{ updatedAt }}
+    </div>
   </div>
 </template>
 
 <style scoped>
 .post-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  margin: -0.5em 0 1.5em;
-  font-size: 0.88em;
-  color: var(--vp-c-text-3);
+  flex-direction: column;
+  gap: 0.35em;
+  margin-bottom: 1em;
+  padding-bottom: 0.9em;
+  border-bottom: 1px solid var(--vp-c-divider);
+  font-size: 0.82em;
+  color: var(--vp-c-text-2);
 }
 .post-meta-item {
   display: flex;
-  align-items: center;
-  gap: 0.3em;
+  align-items: baseline;
+  gap: 0.4em;
 }
-.post-meta-icon {
-  font-size: 0.95em;
+.post-meta-label {
+  color: var(--vp-c-text-3);
+  white-space: nowrap;
 }
 </style>

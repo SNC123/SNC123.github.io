@@ -8,23 +8,6 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       md.use(mathjax3)
-
-      // 自动在每篇文章第一个 h1 后注入 <PostMeta />
-      md.core.ruler.push('inject-post-meta', (state) => {
-        const tokens = state.tokens
-        for (let i = 0; i < tokens.length; i++) {
-          if (tokens[i].type === 'heading_open' && tokens[i].tag === 'h1') {
-            let closeIdx = i + 1
-            while (closeIdx < tokens.length && tokens[closeIdx].type !== 'heading_close') {
-              closeIdx++
-            }
-            const metaToken = new state.Token('html_block', '', 0)
-            metaToken.content = '<PostMeta />\n'
-            tokens.splice(closeIdx + 1, 0, metaToken)
-            break
-          }
-        }
-      })
     }
   },
   themeConfig: {
@@ -55,6 +38,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/SNC123' }
     ],
     outline: {
+      level: [2, 3],
       label: '本页目录'
     },
     sidebarMenuLabel: '菜单',
@@ -65,13 +49,6 @@ export default defineConfig({
     docFooter: {
       prev: '上一篇',
       next: '下一篇'
-    },
-    lastUpdated: {
-      text: '最后更新于',
-      formatOptions: {
-        dateStyle: 'short',
-        timeStyle: 'short'
-      }
     }
   }
 })

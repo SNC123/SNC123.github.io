@@ -29,3 +29,31 @@
   --bc-axis: #71717a;
   --bc-dot-border: #1e1e20;
 }
+
+/* Hide built-in footer last-updated */
+.VPDocFooter .edit-info {
+  display: none;
+}
+
+/* Outline TOC: wrap long titles instead of truncating */
+.outline-link {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+}
+
+/* Widen the aside/TOC sidebar */
+.VPDoc .aside {
+  max-width: 320px;
+  min-width: 320px;
+}
+.aside-container,
+.aside-curtain {
+  width: 280px !important;
+}
+
+/* Remove divider lines above h2 headings */
+.vp-doc h2 {
+  border-top: none;
+  padding-top: 0;
+}
