@@ -2,19 +2,19 @@
 layout: home
 
 hero:
-  name: My Blog
-  text: A VitePress Blog
-  tagline: Thoughts, ideas, and more.
+  name: 我的博客
+  text: 由 VitePress 驱动
+  tagline: 记录思考与探索。
   actions:
     - theme: brand
-      text: Read Posts
+      text: 阅读文章
       link: /posts/
 
 features:
-  - title: Fast
-    details: Powered by VitePress and Vite for blazing fast performance.
-  - title: Simple
-    details: Clean and minimal design to focus on content.
+  - title: 快速
+    details: 基于 VitePress 与 Vite，拥有极速的构建和页面加载性能。
+  - title: 简洁
+    details: 专注于内容，干净清爽的默认主题。
   - title: Markdown
-    details: Write posts in Markdown with full support for code highlighting.
+    details: 使用 Markdown 写作，支持代码高亮、数学公式等扩展功能。
 ---

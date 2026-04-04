@@ -1,37 +1,37 @@
-# Getting Started
+# 快速上手
 
-*April 4, 2026*
+*2026 年 4 月 4 日*
 
-This guide covers the basics of writing posts for this blog.
+本文介绍如何为本博客撰写文章。
 
-## Creating a Post
+## 新建文章
 
-Add a new `.md` file under the `posts/` directory:
+在 `posts/` 目录下新建一个 `.md` 文件：
 
 ```
 posts/
   my-new-post.md
 ```
 
-Then register it in `.vitepress/config.mts` under the sidebar.
+然后在 `.vitepress/config.mts` 的 `sidebar` 中注册该文件。
 
 ## Frontmatter
 
-You can add metadata at the top of each post:
+在文章顶部添加元数据：
 
 ```yaml
 ---
-title: My Post
+title: 我的文章
 date: 2026-04-04
 ---
 ```
 
-## Markdown Features
+## Markdown 特性
 
-VitePress supports all standard Markdown plus:
+VitePress 支持标准 Markdown 的全部语法，还额外支持：
 
-- Syntax highlighting
-- Custom containers
-- Vue components inside Markdown
+- 语法高亮
+- 自定义容器（提示框）
+- 在 Markdown 中直接使用 Vue 组件
 
-Happy writing!
+祝写作愉快！

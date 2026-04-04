@@ -1,6 +1,6 @@
-# Posts
+# 文章列表
 
-Welcome to my blog! Here are the latest posts.
+欢迎来到我的博客！以下是所有文章。
 
-- [Hello VitePress](./hello-vitepress)
-- [Getting Started](./getting-started)
+- [VitePress 入门指南](./hello-vitepress)
+- [基础使用：图片与公式](./basic-usage)
