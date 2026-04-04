@@ -16,11 +16,11 @@ date: 2026-04-04
 ![VitePress Logo](https://vitepress.dev/vitepress-logo-large.webp)
 ```
 
-效果：
-
 ![VitePress Logo](https://vitepress.dev/vitepress-logo-large.webp)
 
-### 本地图片：方式一 —— `public/` 目录（绝对路径）
+### 本地图片
+
+方式一：绝对路径
 
 将图片放在项目根目录的 `public/` 下，构建时会原样复制到站点根目录，使用绝对路径引用：
 
@@ -33,16 +33,7 @@ public/
 ```markdown
 ![VitePress Logo](/images/vitepress-logo-mini.svg)
 ```
-
-效果：
-
-![VitePress Logo](/images/vitepress-logo-mini.svg)
-
-**适合场景：** 多篇文章共用的图片、favicon、全局资源。
-
----
-
-### 本地图片：方式二 —— 与 `.md` 同级（相对路径）
+方式二：相对路径
 
 将图片放在与文章相同的目录下，使用相对路径引用，VitePress 会自动处理打包：
 
@@ -56,11 +47,6 @@ posts/
 ![VitePress Logo](./vitepress-logo-mini.svg)
 ```
 
-效果：
-
-![VitePress Logo](./vitepress-logo-mini.svg)
-
-**适合场景：** 仅某篇文章使用的配图，与文章放在一起便于管理。
 
 ### 指定图片大小
 
@@ -77,8 +63,6 @@ VitePress 支持通过 HTML 控制尺寸：
 ```html
 <img src="./vitepress-logo-mini.svg" width="80" style="display:block;margin:0 auto" alt="logo" />
 ```
-
-效果：
 
 <img src="./vitepress-logo-mini.svg" width="80" style="display:block;margin:0 auto" alt="logo" />
 
@@ -131,7 +115,7 @@ $$
 \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}, \qquad \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
 $$
 
-## 图表组件（BenchmarkChart）
+## 图表组件
 
 本站内置了 `BenchmarkChart` Vue 组件，可在任意 Markdown 文章中直接使用，无需 `import`。
 

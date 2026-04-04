@@ -3,6 +3,7 @@ date: 2026-04-04
 ---
 
 # ShardCounter 性能优化
+
 ## 背景
 
 3月面试季，被要求实现一个高性能 ShardCounter
