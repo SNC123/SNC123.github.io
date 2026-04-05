@@ -4,8 +4,6 @@ date: 2026-04-04
 
 # 基础使用
 
-本文演示在 VitePress 博客中插入图片和数学公式的方法。
-
 ## 插入图片
 
 ### 外部图片
@@ -66,6 +64,44 @@ VitePress 支持通过 HTML 控制尺寸：
 
 <img src="./vitepress-logo-mini.svg" width="80" style="display:block;margin:0 auto" alt="logo" />
 
+
+## 图片画廊组件
+
+本站内置了 `ImageGallery` Vue 组件，可自动居中并排展示多张图片，并以**文件名**作为图例。
+
+### 用法
+
+```html
+<ImageGallery :images="['/images/a.png', '/images/b.png']" />
+```
+
+### 参数说明
+
+| 参数 | 类型 | 默认值 | 说明 |
+|------|------|--------|------|
+| `images` | `string \| string[]` | — | 图片路径，单张或数组 |
+| `layout` | `'row' \| 'grid'` | `'row'` | 排列方式：`row` 水平并排，`grid` 换行网格 |
+| `maxWidth` | `number` | `320` | 每张图片的最大宽度（px） |
+
+图例自动取文件名（去掉扩展名），无需手动指定。
+
+### 示例：并排展示
+
+```html
+<ImageGallery :images="['/images/vitepress-logo-mini.svg', '/images/vitepress-logo-mini.svg']" />
+```
+
+<ImageGallery :images="['/images/vitepress-logo-mini.svg', '/images/vitepress-logo-mini.svg']" />
+
+### 示例：限制宽度
+
+```html
+<ImageGallery :images="['/images/vitepress-logo-mini.svg']" :maxWidth="120" />
+```
+
+<ImageGallery :images="['/images/vitepress-logo-mini.svg']" :maxWidth="120" />
+
+---
 
 ## 数学公式
 
