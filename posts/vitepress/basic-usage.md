@@ -67,7 +67,7 @@ VitePress 支持通过 HTML 控制尺寸：
 
 ## 图片画廊组件
 
-本站内置了 `ImageGallery` Vue 组件，可自动居中并排展示多张图片，并以**文件名**作为图例。
+本站内置了 `ImageGallery` Vue 组件，支持并排展示、网格排列、轮播模式，图例自动取文件名（去掉扩展名）。点击任意图片可全屏放大（Lightbox），按 `Esc` 或点击背景关闭。
 
 ### 用法
 
@@ -80,10 +80,23 @@ VitePress 支持通过 HTML 控制尺寸：
 | 参数 | 类型 | 默认值 | 说明 |
 |------|------|--------|------|
 | `images` | `string \| string[]` | — | 图片路径，单张或数组 |
-| `layout` | `'row' \| 'grid'` | `'row'` | 排列方式：`row` 水平并排，`grid` 换行网格 |
-| `maxWidth` | `number` | `320` | 每张图片的最大宽度（px） |
+| `layout` | `'row' \| 'grid' \| 'uniform'` | `'row'` | 排列方式，见下方说明 |
+| `rowHeight` | `number` | `280` | `row` / `uniform` 模式下图片的统一高度（px），宽度按原图比例自适应 |
+| `maxWidth` | `number` | `320` | `grid` 模式下每张图片的最大宽度（px） |
 
-图例自动取文件名（去掉扩展名），无需手动指定。
+**`layout` 取值说明：**
+
+- `row`（默认）：所有图片固定同等高度、宽度按比例自适应地水平并排展示。若宽度不足以在同一行放下所有图片，**自动切换为轮播模式**。
+- `grid`：换行网格，每张图片最大宽度由 `maxWidth` 控制。
+- `uniform`：强制轮播模式，无论图片数量多少。
+
+### 轮播模式
+
+自动触发或使用 `layout="uniform"` 时进入轮播模式：
+
+- 当前图居中显示，左右相邻图从侧面露出，透明度降低
+- 点击左右按钮或点击侧面的图片可切换
+- 点击当前图可全屏放大
 
 ### 示例：并排展示
 
@@ -93,13 +106,21 @@ VitePress 支持通过 HTML 控制尺寸：
 
 <ImageGallery :images="['/images/vitepress-logo-mini.svg', '/images/vitepress-logo-mini.svg']" />
 
-### 示例：限制宽度
+### 示例：指定高度
 
 ```html
-<ImageGallery :images="['/images/vitepress-logo-mini.svg']" :maxWidth="120" />
+<ImageGallery :images="['/images/vitepress-logo-mini.svg', '/images/vitepress-logo-mini.svg']" :rowHeight="120" />
 ```
 
-<ImageGallery :images="['/images/vitepress-logo-mini.svg']" :maxWidth="120" />
+<ImageGallery :images="['/images/vitepress-logo-mini.svg', '/images/vitepress-logo-mini.svg']" :rowHeight="120" />
+
+### 示例：强制轮播
+
+```html
+<ImageGallery :images="['/images/vitepress-logo-mini.svg', '/images/vitepress-logo-mini.svg']" layout="uniform" :rowHeight="120" />
+```
+
+<ImageGallery :images="['/images/vitepress-logo-mini.svg', '/images/vitepress-logo-mini.svg']" layout="uniform" :rowHeight="120" />
 
 ---
 
