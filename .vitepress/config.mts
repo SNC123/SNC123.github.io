@@ -26,7 +26,8 @@ const postsSidebar: DefaultTheme.SidebarItem[] = [
     text: '博物(Nature)',
     collapsed: false,
     items: [
-      { text: '花卉分类基本方法', link: '/posts/nature/花卉分类基本方法.md' }
+      { text: '花卉分类基本方法', link: '/posts/nature/花卉分类基本方法.md' },
+      { text: '日常花卉记录', link: '/posts/nature/日常花卉记录.md' }
     ]
   }
 ]
